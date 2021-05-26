@@ -1,0 +1,13 @@
+#to show the number of times a letter occured in the inputted word
+print("To show the number of times a letter occured in the inputted word")
+a=input("Enter the word : ")
+d={}
+for i in range(len(a)):
+    letter=a[i]
+    if letter in d:
+        d[letter]+=1
+    else:
+        d[letter]=1
+new_d=sorted(d.items(),key=lambda x: x[1], reverse=True)
+for i in new_d:
+    print(i[0],'=',i[1])
